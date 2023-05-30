@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.remotemonitoringapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:icon="@drawable/pic"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/pic"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3325366093386305~8601838151"/>
+
+        <service
+            android:name="com.example.remotemonitoringapp.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".communication_patient" />
+        <activity android:name=".aob_doctor" />
+        <activity android:name=".update_aob_doctor" />
+        <activity android:name=".upload_aob_doctor" />
+        <activity android:name=".aob_comment_doctor" />
+        <activity android:name=".aob_patient" />
+        <activity android:name=".update_aob_patient" />
+        <activity android:name=".upload_aob_patient" />
+        <activity android:name=".aob_comment_patient" />
+        <activity android:name=".comment_design_patient" />
+        <activity android:name=".comment_patient" />
+        <activity android:name=".taskpage_patient" />
+        <activity android:name=".comment_design_doctor" />
+        <activity android:name=".reports_employer" />
+        <activity android:name=".reports_employee" />
+        <activity android:name=".communication_doctor" />
+        <activity android:name=".comment_doctor" />
+        <activity android:name=".taskpage_doctor" />
+        <activity android:name=".upload_doctor" />
+        <activity android:name=".update_doctor" />
+        <activity android:name=".patient_dashboard" />
+        <activity android:name=".doctor_dashboard" />
+        <activity android:name=".welcome" />
+        <activity android:name=".founderRegister" />
+        <activity android:name=".patientRegister" />
+        <activity android:name=".Task" />
+        <activity android:name=".patientLogin" />
+        <activity android:name=".resetPassword" />
+        <activity android:name=".founderLogin" />
+        <activity android:name=".due_date_patient" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
